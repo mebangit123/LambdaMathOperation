@@ -1,5 +1,8 @@
 package com.math.lambda;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class MathOperation {
 	public static void main(String[] args) {
 		System.out.println("Math Operation Using Lambda Expression");
@@ -18,6 +21,12 @@ public class MathOperation {
 		MathFunction.printResult(6, 2, "Substraction", sub);
 		MathFunction.printResult(6, 2, "Multiplication", mul);
 		MathFunction.printResult(6, 2, "Division", div);
+		System.out.println("--------------------------------------------");
+		Integer[] arr = new Integer[] {12, 6, 7, 23, 13, 21, 22, 9,10};
+		List<Integer> mylist = Arrays.asList(arr);
+		mylist.forEach(n -> {
+			System.out.println("Lambda expression number play list: "+ n);
+		});
 	}
 }
 interface MathFunction {
