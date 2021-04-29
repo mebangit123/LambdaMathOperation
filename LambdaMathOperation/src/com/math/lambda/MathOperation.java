@@ -2,6 +2,7 @@ package com.math.lambda;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
 
 public class MathOperation {
 	public static void main(String[] args) {
@@ -26,6 +27,11 @@ public class MathOperation {
 		List<Integer> mylist = Arrays.asList(arr);
 		mylist.forEach(n -> {
 			System.out.println("Lambda expression number play list: "+ n);
+		});
+		System.out.println("--------------------------------------------");
+		Function<Integer, Double> toDouble = Integer::doubleValue;
+		mylist.forEach(n -> {
+			System.out.println("Integer to Double: "+ toDouble.apply(n));
 		});
 	}
 }
